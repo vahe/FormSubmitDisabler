@@ -24,7 +24,7 @@ function checkAndUpdateSubmitButtonStatus(currentForm){
     var numberOfFields = parentFormInputs.length;
     //iterate thru the fields
     for(var i=0; i < numberOfFields; ++i){
-        enableButton = ((parentFormInputs[i].value != '' || parentFormInputs[i].classList.contains('optional')) && enableButton);
+        enableButton = ((parentFormInputs[i].value.trim() || parentFormInputs[i].classList.contains('optional')) && enableButton);
     }
 
     //update the button 'disabled' state
