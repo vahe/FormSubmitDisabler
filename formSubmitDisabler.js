@@ -5,7 +5,7 @@ checkAndUpdateSubmitButtonStatus($('form#fbdForm'));
 
 //Add id="fbdForm" to the forms you want to enable FormSubmitDisabler for
 //On keyup in any of the #fbdForm text or password fields, perform a check to update submit button's state 
-$('#fbdForm input:text, #fbdForm input:password').keyup(function(){
+$('#fbdForm input:text, #fbdForm input:password').bind('keyup paste', function(){
     var parentForm = $(this).closest('form#fbdForm');    
     
     //need to pass the form selector to the function
