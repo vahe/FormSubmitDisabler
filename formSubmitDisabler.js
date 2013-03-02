@@ -12,6 +12,11 @@ $('#fbdForm input:text, #fbdForm input:password').bind('keyup paste', function()
     checkAndUpdateSubmitButtonStatus(parentForm);
 });
 
+//to update button status after an ajax request (jQuery UJS)
+$('#fdbForm').bind('ajax:complete', function(){
+    checkAndUpdateSubmitButtonStatus($(this));
+});
+
 
 //Checks every text and password inputs, expect those with class="optional"
 //Disables the submit button(s) if any of the non-optional fields are empty
