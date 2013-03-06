@@ -23,4 +23,4 @@ To enable FormSubmitDisabler for a form, simply append "fbdForm" to the id attri
 </form>
 ```
 
-It it assumed that all the fields are required. To skip validation of certain field, append ```class="optional"``` to the input element. 
+It it assumed that all the fields are required. To skip validation of a certain field, append ```class="optional"``` to the input element. 
